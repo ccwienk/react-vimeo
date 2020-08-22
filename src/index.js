@@ -32,6 +32,7 @@ class Vimeo extends React.Component {
     /* eslint-disable react/destructuring-assignment */
     return {
       id: this.props.video,
+      dnt: this.props.dnt,
       width: this.props.width,
       height: this.props.height,
       autopause: this.props.autopause,
@@ -190,6 +191,7 @@ if (process.env.NODE_ENV !== 'production') {
      * Inline style for container element.
      */
     style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    dns: PropTypes.bool,
     /**
      * Width of the player element.
      */
@@ -352,6 +354,7 @@ if (process.env.NODE_ENV !== 'production') {
 Vimeo.defaultProps = {
   autopause: true,
   autoplay: false,
+  dnt: false,
   showByline: true,
   controls: true,
   loop: false,
